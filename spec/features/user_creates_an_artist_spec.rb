@@ -5,7 +5,7 @@ RSpec.feature "user create a new artist" do
     artist_name = "Bob Marley"
     artist_image_path = "www.google.com"
 
-    visit artist_path
+    visit artists_path
     click_on "New artist"
     fill_in "artist_name", with: artist_name
     fill_in "artist_image_path", with: artist_image_path
