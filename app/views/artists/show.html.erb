@@ -5,6 +5,6 @@
 <p><%= song.title %></p>
 <% end %>
 <p><%= link_to("Edit", edit_artist_path) %></p>
-<p><%= link_to("Delete", edit_artist_path(@artist), method: :delete, data: {confirm: "Really delete the artist?"}) %></p>
+<p><%= link_to("Delete", artist_path(@artist), method: :delete, data: {confirm: "Really delete the artist?"}) %></p>
 <p><%= link_to("New Song", new_artist_song_path(@artist))%></p>
 <p><%= link_to("Create Song", new_artist_song_path(@artist)) %></p>

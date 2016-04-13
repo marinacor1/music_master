@@ -8,13 +8,12 @@ RSpec.feature "user can create a song" do
     artist_bob = Artist.create(name: artist_1, image_path: url)
     artist_2 = Artist.create(name: "Bob Dylan", image_path: url)
     song_title = "One Love"
-    visit artists_path
 
     visit artist_path(artist_bob)
     click_on "New Song"
     fill_in "Title", with: song_title
     click_on "Create Song"
-save_and_open_page
+
     expect(page).to have_content song_title
     expect(page).to have_link artist_bob.name, href: artist_path(artist_bob)
   end
