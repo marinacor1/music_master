@@ -13,7 +13,11 @@ class ArtistsController < ApplicationController
 
   def create
     @artist = Artist.create(param_check)
-    redirect_to artist_path(@artist)
+      if @artist.save
+        redirect_to artist_path(@artist)
+      else
+        render :new
+      end
   end
 
   private
