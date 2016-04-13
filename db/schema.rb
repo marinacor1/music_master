@@ -1,10 +1,16 @@
-ActiveRecord::Schema.define(version: 20160413035345) do
+ActiveRecord::Schema.define(version: 20160413205750) do
 
   enable_extension "plpgsql"
 
   create_table "artists", force: :cascade do |t|
     t.string   "name"
     t.string   "image_path"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "playlists", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
